@@ -1,0 +1,12 @@
+module top_module (
+    input ring,
+    input vibrate_mode,
+    output  ringer,       // Make sound
+    output motor         // Vibrate
+);
+ assign ringer= ~ring ? 0: ~vibrate_mode ? 1: 0;
+ assign motor = ~ring ? 0: vibrate_mode ? 1:0;
+            
+            
+
+endmodule
